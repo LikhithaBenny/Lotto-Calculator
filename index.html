@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lotto Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+      </head>
+    <body>
+        <div id="modalContainer" class="modal"></div>
+        <div class="main-container">
+            <header class="header">
+                <span class="header-left">Lotto & Bitcoin</span>
+                <div class="header-right">
+                    <div class="ribbon-wrapper">
+                        <div class="corner-ribbon"><span>NEW</span></div>
+                    </div>
+                </div>
+            </header>
+            <div class="contentContainer mTop15">
+                <div class="sidebar-container">
+                    <section>
+                        <div class="heading">The Irish Lotto</div>
+                        <div class="para-content">
+                            <p>
+                                Since 16th April 1988,the Irish Lotto takes place every Saturday at 8.00pm.
+                                On 30th May 1990 an additional Wednesday evening draw was introduced.
+                            </p>
+                            <p>
+                                What would EUR 100 in winnings invested on a draw date be worth in EURO now?
+                            </p>
+                            <p>
+                                Enter a date and time in the form to get the next draw date and time, with the curent value of your investment.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="form-container">
+                    <section class="formSection">
+                        <div class="heading">Enter a Date and Time</div>
+                        <div class="formElements">
+                            <input type="text"
+                                placeholder="MM/DD/YYYY HH:mm"
+                                id = "dateTimeInp"
+                                maxlength="16"
+                                autocomplete="off"
+                                autofocus
+                                onkeydown="onInput(event)"
+                                value = ""/>
+                            <button onclick="onSubmit()" id="submitBtn">SUBMIT</button>
+                        </div>
+                    </section>
+                    <section class="tableSection">
+                        <div id="loader"></div>
+                        <div class="scrollable-container">
+                        <table id="result-table">
+                            <thead class="heading">
+                                <tr>
+                                    <th style="width: 20%;">DRAW DATE/TIME</th>
+                                    <th>YOUR BITCOINS VALUE</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
